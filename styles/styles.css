@@ -1,0 +1,18 @@
+* {
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 30rem;
+    margin-bottom: 50px;
+}
+
+.card ul {
+    list-style-type: none; 
+}
