@@ -17,4 +17,3 @@ export async function fetchData(characterQuery) {
         throw new Error('Failed to fetch data from the API');
     }
 }
-

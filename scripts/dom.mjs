@@ -17,3 +17,4 @@ export function updateCharacterCard(characterIndex, data) {
     const charcterAka = data[0].aka;
     document.getElementById('aka' + characterIndex).innerText = 'Aka: ' + charcterAka;
 }
+
