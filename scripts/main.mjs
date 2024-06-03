@@ -1,13 +1,13 @@
-import { fetchData, fetchData2 } from './api.mjs';
+import { fetchData } from './api.mjs';
 import { updateCharacterCard } from './dom.mjs';
 
 const characterQuery = [
-    "?q=captain%20america",
-    "?q=winter%20",
-    "?q=black%20widow",
-    "?q=black%20panther",
-    "?q=Spider-man",
-    "?q=loki"
+    "captain%20america",
+    "winter%20",
+    "black%20widow",
+    "black%20panther",
+    "Spider-man",
+    "loki"
 ];
 
 async function fetchAndPopulateData(characterQuery) {
