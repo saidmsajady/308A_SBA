@@ -5,43 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <script defer src="./scripts/main.mjs" type="module"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <script defer src="./scripts/script.mjs"></script>
 </head>
-    <body>
+<body>
 
-        <br><br>
+    <br><br>
 
-        <h1>These are my 6 favorite Marvel Charcters</h1>
+    <h1>These are my 6 favorite Marvel Characters</h1>
+    <h1>Type the number that corresponds to the character to go that character's info!</h1>
+    <h1>- The options are -</h1>
+    <h2>2: Captian America, 23: Winter Soilder, 4: Black Widow, 8: Black Panther, 7: Spider-Man, 22: Loki</h2>
 
-        <br><br>
+    <input type="number" id="characterNumberInput" placeholder="Enter character number">
+    <button onclick="fetchData2(document.getElementById('characterNumberInput').value)">Get Character Info</button>
 
-        <img src="./images/cap.jpg" class="opt1" alt="cap" style="width: 500px;" onclick="scrollToCard(1)">
-        <img src="./images/winter.jpeg" class="op52" alt="winter" style="width: 500px;" onclick="scrollToCard(2)">
-        <img src="./images/black.jpg" class="opt3" alt="black" style="width: 500px;" onclick="scrollToCard(3)">
-        <br><br>
-        <img src="./images/panther.jpg" class="opt4" alt="panther" style="width: 500px;" onclick="scrollToCard(4)">
-        <img src="./images/spider.jpeg" class="opt5" alt="spider" style="width: 500px;" onclick="scrollToCard(5)">
-        <img src="./images/loki.jpg" class="opt6" alt="loki" style="width: 500px;" onclick="scrollToCard(6)">
-    
+    <br><br>
 
-        <br><br><br>
+    <img src="./images/cap.jpg" class="opt1" alt="cap" style="width: 500px;" onclick="scrollToCard('card1')">
+    <img src="./images/winter.jpeg" class="op52" alt="winter" style="width: 500px;" onclick="scrollToCard('card2')">
+    <img src="./images/black.jpg" class="opt3" alt="black" style="width: 500px;" onclick="scrollToCard('card3')">
+    <br><br>
+    <img src="./images/panther.jpg" class="opt4" alt="panther" style="width: 500px;" onclick="scrollToCard('card4')">
+    <img src="./images/spider.jpeg" class="opt5" alt="spider" style="width: 500px;" onclick="scrollToCard('card5')">
+    <img src="./images/loki.jpg" class="opt6" alt="loki" style="width: 500px;" onclick="scrollToCard('card6')">
 
-        <h1>Select on any of the images above to go that charcters info!</h1>
 
-        <br><br>
+    <br><br><br>
+    <hr>
+    <br><br>
 
-        <div class="card-container">
+    <div class="card-container">
 
-            <!-- Captian America -->
-            <div class="card" id="card1" style="width: 30rem;">
-                <img src="./images/cap.jpg" class="card-img-top" alt="cap">
-                <div class="card-body">
+        <!-- Captain America -->
+        <div class="card" id="card1" style="width: 30rem;">
+            <img src="./images/cap.jpg" class="card-img-top" alt="cap">
+            <div class="card-body">
                 <h5 id="fav1"></h5>
-                <p id="bio1">\</p>
-                </div>
-                <ul class="list-group list-group-flush">
+                <p id="bio1"></p>
+                <input type="text" id="aliasInput1" placeholder="Enter new alias">
+                <button onclick="updateAlias(1)">Update Alias</button>
+            </div>
+            <ul class="list-group list-group-flush">
                 <li id="power1">Skills:</li>
                 <hr>
                 <li id="allies1">Allies:</li>
@@ -49,17 +54,19 @@
                 <li id="villains1">Villains:</li>
                 <hr>
                 <li id="aka1">Aka:</li>
-                </ul>
-            </div>
+            </ul>
+        </div>
 
-            <!-- Winter Soilder -->
-            <div class="card" id="card2" style="width: 30rem;">
-                <img src="./images/winter.jpeg" class="card-img-top" alt="winter">
-                <div class="card-body">
+        <!-- Winter Soldier -->
+        <div class="card" id="card2" style="width: 30rem;">
+            <img src="./images/winter.jpeg" class="card-img-top" alt="winter">
+            <div class="card-body">
                 <h5 id="fav2"></h5>
                 <p id="bio2"></p>
-                </div>
-                <ul class="list-group list-group-flush">
+                <input type="text" id="aliasInput2" placeholder="Enter new alias">
+                <button onclick="updateAlias(2)">Update Alias</button>
+            </div>
+            <ul class="list-group list-group-flush">
                 <li id="power2">Skills:</li>
                 <hr>
                 <li id="allies2">Allies:</li>
@@ -67,17 +74,19 @@
                 <li id="villains2">Villains:</li>
                 <hr>
                 <li id="aka2">Aka:</li>
-                </ul>
-            </div>
+            </ul>
+        </div>
 
-            <!-- Black Widow -->
-            <div class="card" id="card3" style="width: 30rem;">
-                <img src="./images/black.jpg" class="card-img-top" alt="black">
-                <div class="card-body">
+        <!-- Black Widow -->
+        <div class="card" id="card3" style="width: 30rem;">
+            <img src="./images/black.jpg" class="card-img-top" alt="black">
+            <div class="card-body">
                 <h5 id="fav3"></h5>
                 <p id="bio3"></p>
-                </div>
-                <ul class="list-group list-group-flush">
+                <input type="text" id="aliasInput3" placeholder="Enter new alias">
+                <button onclick="updateAlias(3)">Update Alias</button>
+            </div>
+            <ul class="list-group list-group-flush">
                 <li id="power3">Skills:</li>
                 <hr>
                 <li id="allies3">Allies:</li>
@@ -85,17 +94,19 @@
                 <li id="villains3">Villains:</li>
                 <hr>
                 <li id="aka3">Aka:</li>
-                </ul>
-            </div>
+            </ul>
+        </div>
 
-            <!-- Black Panther -->
-            <div class="card" id="card4" style="width: 30rem;">
-                <img src="./images/panther.jpg" class="card-img-top" alt="black">
-                <div class="card-body">
+        <!-- Black Panther -->
+        <div class="card" id="card4" style="width: 30rem;">
+            <img src="./images/panther.jpg" class="card-img-top" alt="black">
+            <div class="card-body">
                 <h5 id="fav4"></h5>
                 <p id="bio4"></p>
-                </div>
-                <ul class="list-group list-group-flush">
+                <input type="text" id="aliasInput4" placeholder="Enter new alias">
+                <button onclick="updateAlias(4)">Update Alias</button>
+            </div>
+            <ul class="list-group list-group-flush">
                 <li id="power4">Skills:</li>
                 <hr>
                 <li id="allies4">Allies:</li>
@@ -103,17 +114,19 @@
                 <li id="villains4">Villains:</li>
                 <hr>
                 <li id="aka4">Aka:</li>
-                </ul>
-            </div>
+            </ul>
+        </div>
 
-            <!-- Spiderman -->
-            <div class="card" id="card5" style="width: 30rem;">
-                <img src="./images/spider.jpeg" class="card-img-top" alt="black">
-                <div class="card-body">
+        <!-- Spiderman -->
+        <div class="card" id="card5" style="width: 30rem;">
+            <img src="./images/spider.jpeg" class="card-img-top" alt="black">
+            <div class="card-body">
                 <h5 id="fav5"></h5>
                 <p id="bio5"></p>
-                </div>
-                <ul class="list-group list-group-flush">
+                <input type="text" id="aliasInput5" placeholder="Enter new alias">
+                <button onclick="updateAlias(5)">Update Alias</button>
+            </div>
+            <ul class="list-group list-group-flush">
                 <li id="power5">Skills:</li>
                 <hr>
                 <li id="allies5">Allies:</li>
@@ -121,17 +134,19 @@
                 <li id="villains5">Villains:</li>
                 <hr>
                 <li id="aka5">Aka:</li>
-                </ul>
-            </div>
+            </ul>
+        </div>
 
-            <!-- Loki -->
-            <div class="card" id="card6" style="width: 30rem;">
-                <img src="./images/loki.jpg" class="card-img-top" alt="black">
-                <div class="card-body">
+        <!-- Loki -->
+        <div class="card" id="card6" style="width: 30rem;">
+            <img src="./images/loki.jpg" class="card-img-top" alt="black">
+            <div class="card-body">
                 <h5 id="fav6"></h5>
                 <p id="bio6"></p>
-                </div>
-                <ul class="list-group list-group-flush">
+                <input type="text" id="aliasInput6" placeholder="Enter new alias">
+                <button onclick="updateAlias(6)">Update Alias</button>
+            </div>
+            <ul class="list-group list-group-flush">
                 <li id="power6">Skills:</li>
                 <hr>
                 <li id="allies6">Allies:</li>
@@ -139,9 +154,10 @@
                 <li id="villains6">Villains:</li>
                 <hr>
                 <li id="aka6">Aka:</li>
-                </ul>
-            </div>
-
+            </ul>
         </div>
-    </body>
+
+    </div>
+
+</body>
 </html>
