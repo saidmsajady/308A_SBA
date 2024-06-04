@@ -13,26 +13,46 @@
     <br><br>
 
     <h1>These are my 6 favorite Marvel Characters</h1>
-    <h1>Copy and Paste the id that corresponds to the character to go that character's info!</h1>
-    <h1>- The options are -</h1>
-    <h2>"captain%20america": Captian America, winter%20: Winter Soilder, black%20widow: Black Widow, </h2>
-    <h2>black%20panther: Black Panther, Spider-man: Spider-Man, loki: Loki</h2>
 
-    <input type="text" id="characterSearchInput" placeholder="Enter character name">
-    <button id="searchButton">Search Character</button>    
+    <br>
+
+    <img src="./images/cap.jpg" class="opt1" alt="cap" style="width: 400px;" onclick="scrollToCard('card1')">
+    <img src="./images/winter.jpeg" class="op52" alt="winter" style="width: 400px;" onclick="scrollToCard('card2')">
+    <img src="./images/black.jpg" class="opt3" alt="black" style="width: 400px;" onclick="scrollToCard('card3')">
+    <br><br>
+    <img src="./images/panther.jpg" class="opt4" alt="panther" style="width: 400px;" onclick="scrollToCard('card4')">
+    <img src="./images/spider.jpeg" class="opt5" alt="spider" style="width: 400px;" onclick="scrollToCard('card5')">
+    <img src="./images/loki.jpg" class="opt6" alt="loki" style="width: 400px;" onclick="scrollToCard('card6')">
 
     <br><br>
 
-    <img src="./images/cap.jpg" class="opt1" alt="cap" style="width: 500px;" onclick="scrollToCard('card1')">
-    <img src="./images/winter.jpeg" class="op52" alt="winter" style="width: 500px;" onclick="scrollToCard('card2')">
-    <img src="./images/black.jpg" class="opt3" alt="black" style="width: 500px;" onclick="scrollToCard('card3')">
+    <h1>You can select a number from 1-30, <br> and a random Marvel Hero Will Appear Below</h1>
+    <h1>Enter Below</h1>
+
+    <input type="text" id="characterSearchInput" placeholder="Enter Number">
+    <button id="submitButton">Search Character</button>    
+
     <br><br>
-    <img src="./images/panther.jpg" class="opt4" alt="panther" style="width: 500px;" onclick="scrollToCard('card4')">
-    <img src="./images/spider.jpeg" class="opt5" alt="spider" style="width: 500px;" onclick="scrollToCard('card5')">
-    <img src="./images/loki.jpg" class="opt6" alt="loki" style="width: 500px;" onclick="scrollToCard('card6')">
+    <hr>
 
+    <div class="userInputCard">
+        <div class="card" id="card0" style="width: 30rem;">
+            <div class="card-body">
+                <h5 id="fav0"></h5>
+                <p id="bio0"></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="power0">Skills:</li>
+                <hr>
+                <li id="allies0">Allies:</li>
+                <hr>
+                <li id="villains0">Villains:</li>
+                <hr>
+                <li id="aka0">Aka:</li>
+            </ul>
+        </div>
+    </div>
 
-    <br><br><br>
     <hr>
     <br><br>
 
@@ -44,8 +64,6 @@
             <div class="card-body">
                 <h5 id="fav1"></h5>
                 <p id="bio1"></p>
-                <input type="text" id="aliasInput1" placeholder="Enter new alias">
-                <button onclick="updateAlias(1)">Update Alias</button>
             </div>
             <ul class="list-group list-group-flush">
                 <li id="power1">Skills:</li>
@@ -64,8 +82,6 @@
             <div class="card-body">
                 <h5 id="fav2"></h5>
                 <p id="bio2"></p>
-                <input type="text" id="aliasInput2" placeholder="Enter new alias">
-                <button onclick="updateAlias(2)">Update Alias</button>
             </div>
             <ul class="list-group list-group-flush">
                 <li id="power2">Skills:</li>
@@ -84,8 +100,6 @@
             <div class="card-body">
                 <h5 id="fav3"></h5>
                 <p id="bio3"></p>
-                <input type="text" id="aliasInput3" placeholder="Enter new alias">
-                <button onclick="updateAlias(3)">Update Alias</button>
             </div>
             <ul class="list-group list-group-flush">
                 <li id="power3">Skills:</li>
@@ -104,8 +118,6 @@
             <div class="card-body">
                 <h5 id="fav4"></h5>
                 <p id="bio4"></p>
-                <input type="text" id="aliasInput4" placeholder="Enter new alias">
-                <button onclick="updateAlias(4)">Update Alias</button>
             </div>
             <ul class="list-group list-group-flush">
                 <li id="power4">Skills:</li>
@@ -124,8 +136,6 @@
             <div class="card-body">
                 <h5 id="fav5"></h5>
                 <p id="bio5"></p>
-                <input type="text" id="aliasInput5" placeholder="Enter new alias">
-                <button onclick="updateAlias(5)">Update Alias</button>
             </div>
             <ul class="list-group list-group-flush">
                 <li id="power5">Skills:</li>
@@ -144,8 +154,6 @@
             <div class="card-body">
                 <h5 id="fav6"></h5>
                 <p id="bio6"></p>
-                <input type="text" id="aliasInput6" placeholder="Enter new alias">
-                <button onclick="updateAlias(6)">Update Alias</button>
             </div>
             <ul class="list-group list-group-flush">
                 <li id="power6">Skills:</li>

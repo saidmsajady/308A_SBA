@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.card-container {
+.card-container, .userInputCard {
     display: flex;
     flex-direction: column;
     align-items: center;
