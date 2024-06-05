@@ -12,30 +12,32 @@
 
     <br><br>
 
-    <h1>These are my 6 favorite Marvel Characters</h1>
+    <!-- Main header -->
+    <h1 class="userInput">These are my 6 favorite Marvel Characters</h1>
 
-    <br>
+    <!-- Character images -->
+    <div class="favImg">
+        <img src="./images/cap.jpg" class="opt1" alt="cap" style="width: 400px;">
+        <img src="./images/winter.jpeg" class="op52" alt="winter" style="width: 400px;">
+        <img src="./images/black.jpg" class="opt3" alt="black" style="width: 400px;">
+        <br><br>
+        <img src="./images/panther.jpg" class="opt4" alt="panther" style="width: 400px;">
+        <img src="./images/spider.jpeg" class="opt5" alt="spider" style="width: 400px;">
+        <img src="./images/loki.jpg" class="opt6" alt="loki" style="width: 400px;">
+    </div>
 
-    <img src="./images/cap.jpg" class="opt1" alt="cap" style="width: 400px;" onclick="scrollToCard('card1')">
-    <img src="./images/winter.jpeg" class="op52" alt="winter" style="width: 400px;" onclick="scrollToCard('card2')">
-    <img src="./images/black.jpg" class="opt3" alt="black" style="width: 400px;" onclick="scrollToCard('card3')">
-    <br><br>
-    <img src="./images/panther.jpg" class="opt4" alt="panther" style="width: 400px;" onclick="scrollToCard('card4')">
-    <img src="./images/spider.jpeg" class="opt5" alt="spider" style="width: 400px;" onclick="scrollToCard('card5')">
-    <img src="./images/loki.jpg" class="opt6" alt="loki" style="width: 400px;" onclick="scrollToCard('card6')">
+    <!-- User input for surprise character -->
+    <div class="userInput">
+        <h1>Below, type "Iron" for a surprise!</h1>
+        <br>
+        <input type="text" id="characterSearchInput" placeholder="Enter">
+        <button id="submitButton">Submit</button>        
+    </div>
 
-    <br><br><hr>
-
-    <h1>Below, type "Iron" for a suprise!</h1>
-
-    <input type="text" id="characterSearchInput" placeholder="Enter">
-    <button id="submitButton">Submit</button>    
-
-    <br><br>
-
+    <!-- User input card -->
     <div class="userInputCard">
         <div class="card" id="card0" style="width: 30rem;">
-            <img src="./images/iron.jpg" class="card-img-top" alt="black">
+            <img src="./images/iron.jpg" class="card-img-top" alt="iron">
             <div class="card-body">
                 <h5 id="fav0"></h5>
                 <p id="bio0"></p>
@@ -48,16 +50,14 @@
                 <li id="villains0">Villains:</li>
                 <hr>
                 <li id="aka0">Aka:</li>
+                <br>
             </ul>
         </div>
-        <h2>Hope you liked the suprise! But here is all the need to know info regarding my favorite 6 Avengers</h2>
+        <h2 class="userInput">Hope you liked the surprise! Here is all the info on my favorite Avengers</h2>
     </div>
-
-    <hr><br><br>
-
+    
+    <!-- Character cards -->
     <div class="card-container">
-
-        <!-- Captain America -->
         <div class="card" id="card1" style="width: 30rem;">
             <img src="./images/cap.jpg" class="card-img-top" alt="cap">
             <div class="card-body">
@@ -72,10 +72,10 @@
                 <li id="villains1">Villains:</li>
                 <hr>
                 <li id="aka1">Aka:</li>
+                <br>
             </ul>
         </div>
 
-        <!-- Winter Soldier -->
         <div class="card" id="card2" style="width: 30rem;">
             <img src="./images/winter.jpeg" class="card-img-top" alt="winter">
             <div class="card-body">
@@ -90,10 +90,10 @@
                 <li id="villains2">Villains:</li>
                 <hr>
                 <li id="aka2">Aka:</li>
+                <br>
             </ul>
         </div>
 
-        <!-- Black Widow -->
         <div class="card" id="card3" style="width: 30rem;">
             <img src="./images/black.jpg" class="card-img-top" alt="black">
             <div class="card-body">
@@ -108,10 +108,10 @@
                 <li id="villains3">Villains:</li>
                 <hr>
                 <li id="aka3">Aka:</li>
+                <br>
             </ul>
         </div>
 
-        <!-- Black Panther -->
         <div class="card" id="card4" style="width: 30rem;">
             <img src="./images/panther.jpg" class="card-img-top" alt="black">
             <div class="card-body">
@@ -126,10 +126,10 @@
                 <li id="villains4">Villains:</li>
                 <hr>
                 <li id="aka4">Aka:</li>
+                <br>
             </ul>
         </div>
 
-        <!-- Spiderman -->
         <div class="card" id="card5" style="width: 30rem;">
             <img src="./images/spider.jpeg" class="card-img-top" alt="black">
             <div class="card-body">
@@ -144,10 +144,10 @@
                 <li id="villains5">Villains:</li>
                 <hr>
                 <li id="aka5">Aka:</li>
+                <br>
             </ul>
         </div>
 
-        <!-- Loki -->
         <div class="card" id="card6" style="width: 30rem;">
             <img src="./images/loki.jpg" class="card-img-top" alt="black">
             <div class="card-body">
@@ -162,9 +162,9 @@
                 <li id="villains6">Villains:</li>
                 <hr>
                 <li id="aka6">Aka:</li>
+                <br>
             </ul>
         </div>
-
     </div>
 
 </body>

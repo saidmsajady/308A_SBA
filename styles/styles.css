@@ -1,3 +1,21 @@
+html body {
+    background-color: #d52323; 
+}
+
+.favImg {
+    background-color: white;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 90%;
+    margin: 5% auto;
+}
+
+.userInput {
+    color: white;
+    padding: 2%;
+    background-color: rgb(25, 25, 25);
+}
+
 * {
     text-align: center;
 }
@@ -11,6 +29,9 @@
 .card {
     width: 30rem;
     margin-bottom: 50px;
+    padding: 3%;
+    width: 90%;
+    margin: 5% auto;
 }
 
 .card ul {
@@ -18,5 +39,5 @@
 }
 
 .userInputCard {
-    display: none;
+    display: none; 
 }
