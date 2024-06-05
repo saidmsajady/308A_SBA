@@ -1,6 +1,8 @@
+// Import necessary functions
 import { fetchData } from './api.mjs';
 import { updateCharacterCard } from './dom.mjs';
 
+// Array of character queries
 const characterQuery = [
     "captain%20america",
     "winter",
@@ -10,6 +12,7 @@ const characterQuery = [
     "loki"
 ];
 
+// Fetch and populate character data
 async function fetchAndPopulateData(characterQuery) {
     for (let i = 0; i < characterQuery.length; i++) {
         try {
@@ -23,6 +26,7 @@ async function fetchAndPopulateData(characterQuery) {
 
 fetchAndPopulateData(characterQuery);
 
+// Event listener for submit button
 document.getElementById('submitButton').addEventListener('click', async () => {
     const userInput = document.getElementById('characterSearchInput').value.trim().toLowerCase();
     if (userInput === 'iron') {

@@ -9,7 +9,9 @@ export async function fetchData(characterQuery) {
     };
 
     try {
+        // Fetch data from the API
         const response = await fetch(url, options);
+        // Parse response data as JSON
         const data = await response.json();
         return data;
     } catch (error) {
