@@ -16,3 +16,7 @@
 .card ul {
     list-style-type: none; 
 }
+
+.userInputCard {
+    display: none;
+}

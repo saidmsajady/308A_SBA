@@ -3,7 +3,7 @@ import { updateCharacterCard } from './dom.mjs';
 
 const characterQuery = [
     "captain%20america",
-    "winter%20",
+    "winter",
     "black%20widow",
     "black%20panther",
     "Spider-man",
@@ -22,3 +22,19 @@ async function fetchAndPopulateData(characterQuery) {
 }
 
 fetchAndPopulateData(characterQuery);
+
+document.getElementById('submitButton').addEventListener('click', async () => {
+    const userInput = document.getElementById('characterSearchInput').value.trim().toLowerCase();
+    if (userInput === 'iron') {
+        try {
+            const data = await fetchData('iron%20man');
+            updateCharacterCard(0, data);
+            const userInputCard = document.querySelector('.userInputCard');
+            userInputCard.style.display = 'flex'; 
+            userInputCard.style.justifyContent = 'center'; 
+            userInputCard.style.alignItems = 'center'; 
+        } catch (error) {
+            console.error('Failed to fetch Iron Man data:', error.message);
+        }
+    }
+});
